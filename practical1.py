@@ -99,6 +99,10 @@ def evolve_population(population, generations: int, fitness_func, crossover):
     
     return population
 
+'''
+todo : Add loose linkage function for scenario 4, should be easy just add an offset to the loop when creating k blocks
+'''
+
 # Define the configuration
 config = {
     'pop_size': 60,
