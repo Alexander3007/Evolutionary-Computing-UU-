@@ -73,9 +73,6 @@ def evolve_population(population, generations: int, fitness_func, crossover):
     for gen in range(generations):
         new_population = population.copy()
 
-        if len(population) % 2 != 0:
-            population = population[:-1]  # Ensure even number of individuals
-
         for i in range(0, len(population), 2):
             parent1, parent2 = population[i]['individual'], population[i+1]['individual']
 
