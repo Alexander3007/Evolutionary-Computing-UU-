@@ -1,0 +1,16 @@
+Generation,Population Size,Crossover Used,Best Fitness,Mean Fitness
+0,40,two_point_crossover,30.0,22.45
+1,40,two_point_crossover,30.0,24.35
+2,40,two_point_crossover,30.0,25.95
+3,40,two_point_crossover,31.0,27.375
+4,40,two_point_crossover,32.0,28.85
+5,40,two_point_crossover,33.0,29.975
+6,40,two_point_crossover,33.0,31.025
+7,40,two_point_crossover,35.0,31.775
+8,40,two_point_crossover,37.0,32.55
+9,40,two_point_crossover,37.0,33.25
+10,40,two_point_crossover,37.0,34.225
+11,40,two_point_crossover,38.0,35.175
+12,40,two_point_crossover,38.0,36.075
+13,40,two_point_crossover,39.0,36.825
+14,40,two_point_crossover,40.0,37.1

@@ -1,0 +1,20 @@
+Generation,Population Size,Crossover Used,Best Fitness,Mean Fitness
+0,30,uniform_crossover,29.0,21.233333333333334
+1,30,uniform_crossover,29.0,22.7
+2,30,uniform_crossover,29.0,23.833333333333332
+3,30,uniform_crossover,29.0,25.0
+4,30,uniform_crossover,29.0,25.866666666666667
+5,30,uniform_crossover,32.0,27.166666666666668
+6,30,uniform_crossover,32.0,28.366666666666667
+7,30,uniform_crossover,32.0,29.033333333333335
+8,30,uniform_crossover,32.0,30.033333333333335
+9,30,uniform_crossover,34.0,30.933333333333334
+10,30,uniform_crossover,35.0,32.13333333333333
+11,30,uniform_crossover,36.0,32.833333333333336
+12,30,uniform_crossover,37.0,33.766666666666666
+13,30,uniform_crossover,37.0,34.666666666666664
+14,30,uniform_crossover,37.0,35.4
+15,30,uniform_crossover,38.0,36.2
+16,30,uniform_crossover,38.0,36.63333333333333
+17,30,uniform_crossover,39.0,37.166666666666664
+18,30,uniform_crossover,40.0,37.5
