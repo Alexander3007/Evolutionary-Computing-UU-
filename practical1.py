@@ -2,6 +2,9 @@ import numpy as np
 import random
 import csv
 import os
+import matplotlib
+
+
 
 def init_pop_generation(size: int, fitness_func):
     population = np.array([''.join(random.choices('01', k=40)) for _ in range(size)])
@@ -64,13 +67,9 @@ def evolve_population(population, generations: int, fitness_func, crossover,csv_
         writer.writerow(["Generation", "Population Size", "Crossover Used", "Best Fitness", "Mean Fitness"])
 
         for gen in range(generations):
-            population = np.random.permutation(population)  # Shuffle the population
+            population = np.random.permutation(population)  # Shuffle 
             new_population = population.copy()
             improved = False
-
-            # If odd number of individuals, drop the last one for pairing
-            if len(population) % 2 != 0:
-                population = population[:-1]
 
             for i in range(0, len(population), 2):
                 parent1, parent2 = population[i]['individual'], population[i+1]['individual']
@@ -133,9 +132,9 @@ todo : Add loose linkage function for scenario 4, should be easy just add an off
 
 if __name__ == "__main__":
     config = {
-        'pop_size': 30,
+        'pop_size': 180,
         'generations': 50,
-        'fitness_func': counting_ones,       # or deceptive_trap_function
+        'fitness_func': non_deceptive_trap_function,       # or deceptive_trap_function
         'crossover': uniform_crossover     # or uniform_crossover
     }
 
@@ -147,8 +146,8 @@ if __name__ == "__main__":
         folder_name = "Uniform"
 
     # Create the folder if it does not exist (to avoid errors)
-    # Store them under "Experiments/Experiment1/2_points"
-    base_folder = "Experiments/Experiment1"
+    # Store them under "Experiments/Experiment{i}"
+    base_folder = "Experiments/Experiment3"
     output_folder = os.path.join(base_folder, folder_name)
     os.makedirs(output_folder, exist_ok=True)
 

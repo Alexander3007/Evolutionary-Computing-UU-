@@ -1,0 +1,25 @@
+Generation,Population Size,Crossover Used,Best Fitness,Mean Fitness
+0,90,two_point_crossover,18.5,8.822222222222223
+1,90,two_point_crossover,18.5,9.966666666666667
+2,90,two_point_crossover,18.5,11.816666666666666
+3,90,two_point_crossover,20.5,13.394444444444444
+4,90,two_point_crossover,22.0,14.927777777777777
+5,90,two_point_crossover,22.0,16.13888888888889
+6,90,two_point_crossover,23.5,17.31111111111111
+7,90,two_point_crossover,24.0,18.805555555555557
+8,90,two_point_crossover,27.5,20.288888888888888
+9,90,two_point_crossover,27.5,21.494444444444444
+10,90,two_point_crossover,27.5,22.655555555555555
+11,90,two_point_crossover,31.0,23.783333333333335
+12,90,two_point_crossover,31.0,24.52777777777778
+13,90,two_point_crossover,31.5,25.555555555555557
+14,90,two_point_crossover,31.5,26.788888888888888
+15,90,two_point_crossover,33.0,28.05
+16,90,two_point_crossover,35.0,29.255555555555556
+17,90,two_point_crossover,35.0,30.13888888888889
+18,90,two_point_crossover,35.0,31.15
+19,90,two_point_crossover,37.5,32.327777777777776
+20,90,two_point_crossover,37.5,33.361111111111114
+21,90,two_point_crossover,37.5,34.333333333333336
+22,90,two_point_crossover,37.5,35.18333333333333
+23,90,two_point_crossover,40.0,35.5

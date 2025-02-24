@@ -1,0 +1,26 @@
+Generation,Population Size,Crossover Used,Best Fitness,Mean Fitness
+0,170,two_point_crossover,24.0,14.970588235294118
+1,170,two_point_crossover,24.0,16.75294117647059
+2,170,two_point_crossover,24.0,18.41176470588235
+3,170,two_point_crossover,28.0,20.029411764705884
+4,170,two_point_crossover,28.0,21.152941176470588
+5,170,two_point_crossover,29.0,22.229411764705883
+6,170,two_point_crossover,30.0,23.470588235294116
+7,170,two_point_crossover,34.0,24.629411764705882
+8,170,two_point_crossover,36.0,25.629411764705882
+9,170,two_point_crossover,36.0,26.81764705882353
+10,170,two_point_crossover,36.0,27.605882352941176
+11,170,two_point_crossover,36.0,28.55294117647059
+12,170,two_point_crossover,36.0,29.68235294117647
+13,170,two_point_crossover,37.0,30.764705882352942
+14,170,two_point_crossover,38.0,31.641176470588235
+15,170,two_point_crossover,38.0,32.629411764705885
+16,170,two_point_crossover,38.0,33.34705882352941
+17,170,two_point_crossover,38.0,34.0
+18,170,two_point_crossover,39.0,34.794117647058826
+19,170,two_point_crossover,39.0,35.51176470588236
+20,170,two_point_crossover,39.0,36.22941176470588
+21,170,two_point_crossover,39.0,36.94705882352941
+22,170,two_point_crossover,39.0,37.40588235294118
+23,170,two_point_crossover,39.0,37.9
+24,170,two_point_crossover,40.0,38.01764705882353
