@@ -3,6 +3,7 @@ import random
 import csv
 import os
 import matplotlib
+import time
 
 
 
@@ -55,6 +56,54 @@ def deceptive_trap_function(solution: str):
         elif block_fit == 0:
             fitness_score += 3
     return fitness_score
+
+
+
+def deceptive_trap_function_loose(solution: str):
+    indices = [[i + j * 10 for j in range(4)] for i in range(10)]
+    fitness_score = 0
+
+    for block_indices in indices:
+        block = ''.join(solution[i - 1] for i in block_indices) 
+        block_fit = block.count('1')
+
+        if block_fit == 4:
+            fitness_score += 4 
+        elif block_fit == 3:
+            fitness_score += 0
+        elif block_fit == 2:
+            fitness_score += 1
+        elif block_fit == 1:
+            fitness_score += 2
+        elif block_fit == 0:
+            fitness_score += 3
+
+    return fitness_score
+
+
+
+def non_deceptive_trap_function_loose(solution: str):
+    indices = [[i + j * 10 for j in range(4)] for i in range(10)]  # Spread out indices
+    fitness_score = 0
+
+    for block_indices in indices:
+        block = ''.join(solution[i - 1] for i in block_indices)  # Convert 1-based to 0-based
+        block_fit = block.count('1')
+
+        if block_fit == 4:
+            fitness_score += 4 
+        elif block_fit == 3:
+            fitness_score += 0
+        elif block_fit == 2:
+            fitness_score += 0.5
+        elif block_fit == 1:
+            fitness_score += 1
+        elif block_fit == 0:
+            fitness_score += 1.5
+
+    return fitness_score
+
+
 
 def evolve_population(population, generations: int, fitness_func, crossover,csv_filename):
     no_improve_count = 0
@@ -126,15 +175,15 @@ def evolve_population(population, generations: int, fitness_func, crossover,csv_
 
     return population
 
-''' 
-todo : Add loose linkage function for scenario 4, should be easy just add an offset to the loop when creating k blocks
-'''
+
+
+
 
 if __name__ == "__main__":
     config = {
-        'pop_size': 180,
+        'pop_size': 170,
         'generations': 50,
-        'fitness_func': non_deceptive_trap_function,       # or deceptive_trap_function
+        'fitness_func': non_deceptive_trap_function_loose,       # or deceptive_trap_function
         'crossover': uniform_crossover     # or uniform_crossover
     }
 
@@ -147,7 +196,7 @@ if __name__ == "__main__":
 
     # Create the folder if it does not exist (to avoid errors)
     # Store them under "Experiments/Experiment{i}"
-    base_folder = "Experiments/Experiment3"
+    base_folder = "Experiments/Experiment5"
     output_folder = os.path.join(base_folder, folder_name)
     os.makedirs(output_folder, exist_ok=True)
 
