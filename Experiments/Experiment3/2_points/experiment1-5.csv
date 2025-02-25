@@ -1,25 +1,22 @@
-Generation,Population Size,Crossover Used,Best Fitness,Mean Fitness
-0,90,two_point_crossover,18.5,8.822222222222223
-1,90,two_point_crossover,18.5,9.966666666666667
-2,90,two_point_crossover,18.5,11.816666666666666
-3,90,two_point_crossover,20.5,13.394444444444444
-4,90,two_point_crossover,22.0,14.927777777777777
-5,90,two_point_crossover,22.0,16.13888888888889
-6,90,two_point_crossover,23.5,17.31111111111111
-7,90,two_point_crossover,24.0,18.805555555555557
-8,90,two_point_crossover,27.5,20.288888888888888
-9,90,two_point_crossover,27.5,21.494444444444444
-10,90,two_point_crossover,27.5,22.655555555555555
-11,90,two_point_crossover,31.0,23.783333333333335
-12,90,two_point_crossover,31.0,24.52777777777778
-13,90,two_point_crossover,31.5,25.555555555555557
-14,90,two_point_crossover,31.5,26.788888888888888
-15,90,two_point_crossover,33.0,28.05
-16,90,two_point_crossover,35.0,29.255555555555556
-17,90,two_point_crossover,35.0,30.13888888888889
-18,90,two_point_crossover,35.0,31.15
-19,90,two_point_crossover,37.5,32.327777777777776
-20,90,two_point_crossover,37.5,33.361111111111114
-21,90,two_point_crossover,37.5,34.333333333333336
-22,90,two_point_crossover,37.5,35.18333333333333
-23,90,two_point_crossover,40.0,35.5
+Generation,Population Size,Crossover Used,Best Fitness,Mean Fitness,CPU Time,Fitness Function Evaluations
+0,90,two_point_crossover,17.5,9.922222222222222
+1,90,two_point_crossover,20.0,11.522222222222222
+2,90,two_point_crossover,20.0,12.755555555555556
+3,90,two_point_crossover,23.0,14.427777777777777
+4,90,two_point_crossover,23.0,15.966666666666667
+5,90,two_point_crossover,26.0,17.716666666666665
+6,90,two_point_crossover,26.5,19.238888888888887
+7,90,two_point_crossover,29.0,21.205555555555556
+8,90,two_point_crossover,29.5,22.655555555555555
+9,90,two_point_crossover,29.5,24.25
+10,90,two_point_crossover,32.0,25.97222222222222
+11,90,two_point_crossover,32.0,27.272222222222222
+12,90,two_point_crossover,34.0,28.455555555555556
+13,90,two_point_crossover,34.0,29.383333333333333
+14,90,two_point_crossover,35.0,30.6
+15,90,two_point_crossover,36.5,31.522222222222222
+16,90,two_point_crossover,36.5,32.50555555555555
+17,90,two_point_crossover,37.5,33.37222222222222
+18,90,two_point_crossover,37.5,34.483333333333334
+19,90,two_point_crossover,40.0,34.58888888888889
+Final,,,,,0.0435 sec,3523

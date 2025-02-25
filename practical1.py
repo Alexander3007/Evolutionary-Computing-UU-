@@ -195,10 +195,10 @@ def evolve_population(population, generations: int, fitness_func, crossover,csv_
 
 if __name__ == "__main__":
     config = {
-        'pop_size': 60,
+        'pop_size': 1120,
         'generations': 50,
-        'fitness_func': counting_ones,       # or deceptive_trap_function
-        'crossover': two_point_crossover     # or uniform_crossover
+        'fitness_func': non_deceptive_trap_function_loose,       # or deceptive_trap_function
+        'crossover': two_point_crossover   # or uniform_crossover
     }
 
 # Batch running
@@ -210,7 +210,7 @@ if __name__ == "__main__":
 
     # Create the folder if it does not exist (to avoid errors)
     # Store them under "Experiments/Experiment{i}"
-    base_folder = "Experiments/Experiment1"
+    base_folder = "Experiments/Experiment5"
     output_folder = os.path.join(base_folder, folder_name)
     os.makedirs(output_folder, exist_ok=True)
 
