@@ -1,19 +1,20 @@
-Generation,Population Size,Crossover Used,Best Fitness,Mean Fitness
-0,30,uniform_crossover,28.0,22.366666666666667
-1,30,uniform_crossover,29.0,23.6
-2,30,uniform_crossover,29.0,25.466666666666665
-3,30,uniform_crossover,30.0,26.5
-4,30,uniform_crossover,31.0,27.966666666666665
-5,30,uniform_crossover,32.0,28.833333333333332
-6,30,uniform_crossover,34.0,30.433333333333334
-7,30,uniform_crossover,34.0,31.133333333333333
-8,30,uniform_crossover,36.0,32.13333333333333
-9,30,uniform_crossover,36.0,32.96666666666667
-10,30,uniform_crossover,37.0,33.93333333333333
-11,30,uniform_crossover,37.0,35.03333333333333
-12,30,uniform_crossover,37.0,35.666666666666664
-13,30,uniform_crossover,38.0,36.2
-14,30,uniform_crossover,39.0,36.733333333333334
-15,30,uniform_crossover,39.0,37.266666666666666
-16,30,uniform_crossover,39.0,37.833333333333336
-17,30,uniform_crossover,40.0,37.93333333333333
+Generation,Population Size,Crossover Used,Best Fitness,Mean Fitness,CPU Time,Fitness Function Evaluations
+0,20,uniform_crossover,28.0,21.7
+1,20,uniform_crossover,28.0,22.45
+2,20,uniform_crossover,28.0,24.25
+3,20,uniform_crossover,31.0,26.0
+4,20,uniform_crossover,31.0,28.0
+5,20,uniform_crossover,32.0,29.9
+6,20,uniform_crossover,33.0,30.7
+7,20,uniform_crossover,35.0,31.85
+8,20,uniform_crossover,37.0,32.7
+9,20,uniform_crossover,37.0,33.4
+10,20,uniform_crossover,37.0,34.1
+11,20,uniform_crossover,37.0,34.95
+12,20,uniform_crossover,37.0,35.7
+13,20,uniform_crossover,39.0,36.4
+14,20,uniform_crossover,39.0,37.05
+15,20,uniform_crossover,39.0,37.4
+16,20,uniform_crossover,39.0,38.1
+17,20,uniform_crossover,40.0,38.6
+Final,,,,,0.0237 sec,733

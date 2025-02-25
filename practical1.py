@@ -6,6 +6,9 @@ import matplotlib
 import time
 
 
+# Global variable
+fitness_evaluation_count = 0
+
 
 def init_pop_generation(size: int, fitness_func):
     population = np.array([''.join(random.choices('01', k=40)) for _ in range(size)])
@@ -25,6 +28,8 @@ def uniform_crossover(parent1: str, parent2: str):
     return child1, child2
 
 def non_deceptive_trap_function(solution: str):
+    global fitness_evaluation_count
+    fitness_evaluation_count += 1
     block_list = [solution[i:i+4] for i in range(0, 40, 4)]
     fitness_score = 0
     for blocks in block_list:
@@ -40,9 +45,13 @@ def non_deceptive_trap_function(solution: str):
     return fitness_score
 
 def counting_ones(solution: str):
+    global fitness_evaluation_count
+    fitness_evaluation_count += 1
     return solution.count('1')
 
 def deceptive_trap_function(solution: str):
+    global fitness_evaluation_count
+    fitness_evaluation_count += 1
     block_list = [solution[i:i+4] for i in range(0, 40, 4)]
     fitness_score = 0
     for blocks in block_list:
@@ -60,6 +69,8 @@ def deceptive_trap_function(solution: str):
 
 
 def deceptive_trap_function_loose(solution: str):
+    global fitness_evaluation_count
+    fitness_evaluation_count += 1
     indices = [[i + j * 10 for j in range(4)] for i in range(10)]
     fitness_score = 0
 
@@ -83,6 +94,8 @@ def deceptive_trap_function_loose(solution: str):
 
 
 def non_deceptive_trap_function_loose(solution: str):
+    global fitness_evaluation_count 
+    fitness_evaluation_count += 1
     indices = [[i + j * 10 for j in range(4)] for i in range(10)]  # Spread out indices
     fitness_score = 0
 
@@ -113,7 +126,8 @@ def evolve_population(population, generations: int, fitness_func, crossover,csv_
     # Use 'with' to open the file and keep all writes inside
     with open(csv_filename, "w", newline="") as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow(["Generation", "Population Size", "Crossover Used", "Best Fitness", "Mean Fitness"])
+        writer.writerow(["Generation", "Population Size", "Crossover Used", "Best Fitness", "Mean Fitness", "CPU Time", "Fitness Function Evaluations"])
+
 
         for gen in range(generations):
             population = np.random.permutation(population)  # Shuffle 
@@ -163,7 +177,7 @@ def evolve_population(population, generations: int, fitness_func, crossover,csv_
                 # Log stats before returning
                 best_solution = max(new_population, key=lambda x: x['fitness'])
                 mean_fitness = np.mean([ind['fitness'] for ind in new_population])
-                writer.writerow([gen, len(new_population), crossover.__name__, best_solution['fitness'], mean_fitness])
+                writer.writerow([gen, len(population), crossover.__name__, best_solution['fitness'], mean_fitness, "", ""])
                 return new_population
 
             population = new_population  # Update current population
@@ -181,10 +195,10 @@ def evolve_population(population, generations: int, fitness_func, crossover,csv_
 
 if __name__ == "__main__":
     config = {
-        'pop_size': 170,
+        'pop_size': 60,
         'generations': 50,
-        'fitness_func': non_deceptive_trap_function_loose,       # or deceptive_trap_function
-        'crossover': uniform_crossover     # or uniform_crossover
+        'fitness_func': counting_ones,       # or deceptive_trap_function
+        'crossover': two_point_crossover     # or uniform_crossover
     }
 
 # Batch running
@@ -196,12 +210,17 @@ if __name__ == "__main__":
 
     # Create the folder if it does not exist (to avoid errors)
     # Store them under "Experiments/Experiment{i}"
-    base_folder = "Experiments/Experiment5"
+    base_folder = "Experiments/Experiment1"
     output_folder = os.path.join(base_folder, folder_name)
     os.makedirs(output_folder, exist_ok=True)
 
     # Run 10 experiments
     for i in range(1, 11):
+
+
+        fitness_evaluation_count = 0
+        start_time = time.time()
+
         # Init
         population = init_pop_generation(config['pop_size'], fitness_func=config['fitness_func'])
 
@@ -217,6 +236,11 @@ if __name__ == "__main__":
             csv_filename=csv_filename
         )
 
+        elapsed_time = time.time() - start_time
+
+        with open(csv_filename, "a", newline="") as csvfile:
+            writer = csv.writer(csvfile)
+            writer.writerow(["Final", "", "", "", "", f"{elapsed_time:.4f} sec", fitness_evaluation_count])
  
         best_solution = max(final_population, key=lambda x: x['fitness'])
         mean_fitness = np.mean([ind['fitness'] for ind in final_population])
