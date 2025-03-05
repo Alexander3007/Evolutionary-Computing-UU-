@@ -1,23 +1,17 @@
 Generation,Population Size,Crossover Used,Best Fitness,Mean Fitness,CPU Time,Fitness Function Evaluations
-0,60,two_point_crossover,30.0,21.316666666666666
-1,60,two_point_crossover,30.0,23.066666666666666
-2,60,two_point_crossover,30.0,24.45
-3,60,two_point_crossover,30.0,25.833333333333332
-4,60,two_point_crossover,31.0,27.15
-5,60,two_point_crossover,32.0,28.25
-6,60,two_point_crossover,32.0,29.166666666666668
-7,60,two_point_crossover,33.0,30.416666666666668
-8,60,two_point_crossover,34.0,31.433333333333334
-9,60,two_point_crossover,36.0,32.25
-10,60,two_point_crossover,36.0,33.03333333333333
-11,60,two_point_crossover,36.0,33.81666666666667
-12,60,two_point_crossover,37.0,34.583333333333336
-13,60,two_point_crossover,37.0,35.36666666666667
-14,60,two_point_crossover,38.0,35.96666666666667
-15,60,two_point_crossover,38.0,36.46666666666667
-16,60,two_point_crossover,38.0,36.96666666666667
-17,60,two_point_crossover,39.0,37.46666666666667
-18,60,two_point_crossover,39.0,37.93333333333333
-19,60,two_point_crossover,39.0,38.38333333333333
-20,60,two_point_crossover,40.0,38.61666666666667
-Final,,,,,0.0172 sec,2537
+0,60,two_point_crossover,31.0,22.383333333333333
+1,60,two_point_crossover,31.0,23.9
+2,60,two_point_crossover,31.0,25.366666666666667
+3,60,two_point_crossover,33.0,26.916666666666668
+4,60,two_point_crossover,33.0,28.483333333333334
+5,60,two_point_crossover,34.0,29.683333333333334
+6,60,two_point_crossover,34.0,30.983333333333334
+7,60,two_point_crossover,35.0,31.966666666666665
+8,60,two_point_crossover,36.0,32.983333333333334
+9,60,two_point_crossover,36.0,33.68333333333333
+10,60,two_point_crossover,38.0,34.45
+11,60,two_point_crossover,38.0,35.03333333333333
+12,60,two_point_crossover,38.0,35.833333333333336
+13,60,two_point_crossover,38.0,36.43333333333333
+14,60,two_point_crossover,40.0,36.78333333333333
+Final,,,,,0.0125 sec,1777
